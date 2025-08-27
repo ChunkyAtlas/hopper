@@ -57,28 +57,13 @@ public interface HopperConfig extends Config
     )
     default boolean showTimeToFull() { return true; }
 
-    // Optional legacy toggle (not used by the current overlay)
-    @ConfigItem(
-            keyName = "showLastHourUsage",
-            name = "Show last 60m usage",
-            description = "Show how many hops used in the last 60 minutes (out of regen/hour).",
-            position = 6
-    )
-    default boolean showLastHourUsage() { return true; }
-
-    @ConfigItem(
-            keyName = "resetOnLogin",
-            name = "Reset to full on login",
-            description = "If enabled, resets the counter to full when you log in.",
-            position = 7
-    )
     default boolean resetOnLogin() { return false; }
 
     @ConfigItem(
             keyName = "resetHopsNow",
             name = "Reset now",
             description = "Click to instantly refill hops to your cap (auto-turns off after running).",
-            position = 8
+            position = 6
     )
     default boolean resetHopsNow() { return false; }
 }

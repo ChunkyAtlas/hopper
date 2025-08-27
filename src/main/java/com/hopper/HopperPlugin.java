@@ -33,7 +33,7 @@ public class HopperPlugin extends Plugin
     @Inject private HopperOverlay overlay;
     @Inject private Notifier notifier;
 
-    // Token bucket (for Hops remaining / Full in)
+    // Token bucket
     private double tokens;
     private long lastUpdateMillis;
 
@@ -42,7 +42,7 @@ public class HopperPlugin extends Plugin
     private boolean notifiedWarn2 = false;
 
     // hop detection
-    private int stableWorld = -1;     // last known world when LOGGED_IN
+    private int stableWorld = -1;  // last known world when LOGGED_IN
     private boolean hopInProgress = false;
     private int lastWorldSeen = -1;
 
